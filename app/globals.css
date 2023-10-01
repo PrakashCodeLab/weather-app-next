@@ -2,26 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+body{
+    width: 100%;
+    min-height: 100dvh;
+    position: relative;
+
+    } 
+
+.container{
+    width: 100%;
+    min-height: calc(100dvh - 100px);
+    margin: 0 auto;
+    max-width:1280px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
   }
+
+.bg__image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-image: url('../public/assets/mountain.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+  
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.text-gradient{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  
+    letter-spacing: 0.2px;
+  color:wheat;
+  display: inline-block;
+}
+
+
+.neumorphism-shadow {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
 }

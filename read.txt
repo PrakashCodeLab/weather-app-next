@@ -1,0 +1,14 @@
+ useEffect(()=>{
+        const weatherFetch =async () => {
+              try {
+                  const getweather = await weatherFetchApi(city)
+                  SetweatherData(getweather);
+                  SetLoading(true);
+              } catch (error) {
+                console.log(error); 
+              }
+        }
+
+        weatherFetch();
+        
+    },[city])
